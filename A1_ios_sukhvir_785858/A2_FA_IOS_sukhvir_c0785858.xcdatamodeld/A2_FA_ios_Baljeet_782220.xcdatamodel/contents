@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Products" representedClassName="Products" syncable="YES" codeGenerationType="class">
+        <attribute name="product_desc" optional="YES" attributeType="String"/>
+        <attribute name="product_id" optional="YES" attributeType="String"/>
+        <attribute name="product_name" optional="YES" attributeType="String"/>
+        <attribute name="product_price" optional="YES" attributeType="String"/>
+        <relationship name="provider" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Providers" inverseName="product" inverseEntity="Providers"/>
+    </entity>
+    <entity name="Providers" representedClassName="Providers" syncable="YES" codeGenerationType="class">
+        <attribute name="provider_name" optional="YES" attributeType="String"/>
+        <relationship name="product" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Products" inverseName="provider" inverseEntity="Products"/>
+    </entity>
+    <elements>
+        <element name="Products" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="Providers" positionX="-54" positionY="-9" width="128" height="73"/>
+    </elements>
+</model>
